@@ -21,30 +21,75 @@
 
 <body>
     <nav class="top">
-        <div>Portfolio</div>
-        <div class="nav-bar">
-            <ul>Home </ul>
-            <ul>Contact</ul>
+        <ul class="nav-bar">
+            <li class="logo">PortFolio</li>
+            <div class="nav-items">
+            <li >Home</li>
+            <li onclick="scrollFunction()">Contact</li>
         </div>
+        </ul>
     </nav>
-    <div>
-        <div>About Me</div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem iusto, corporis veniam voluptatem velit
+    <div class="about">
+        <div class="about-me">About Me</div>
+        <div class="about-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem iusto, corporis veniam voluptatem velit
             dolores incidunt. Cumque ad nihil fugit?</div>
     </div>
-    <div>
-        <div>My Work</div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, itaque.</div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, architecto!</div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, cum?</div>
-        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, cum?</div>
+    <div class="work">
+       
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner slides-box">
+          <div class="carousel-item active slides">
+            <div class="">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam!</div>
+          </div>
+          <div class="carousel-item slides">
+            <div class="">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, exercitationem!</div>
+          </div>
+          <div class="carousel-item slides">
+            <div class="">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, accusamus.</div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="my-work">My Work</div>
     </div>
-    <div>
+    <div id="contact">
+        
         <div>Contact Me</div>
         <div>Linkedin</div>
         <div>Email</div>
         <div>Contact no</div>
     </div>
+
+    <script>
+        function scrollFunction() {
+          window.scrollTo({left:0, top:findPosition(document.getElementById("contact")), behavior:"smooth"});
+        }
+        function findPosition(obj) {
+          var currenttop = 0;
+          if (obj.offsetParent) {
+            do {
+              currenttop += obj.offsetTop;
+            } while ((obj = obj.offsetParent));
+            return [currenttop];
+          }
+        }
+      </script>
 </body>
 
 </html>
