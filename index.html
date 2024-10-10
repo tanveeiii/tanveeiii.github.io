@@ -2,94 +2,217 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="design.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="design.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Portfolio</title>
 </head>
 
 <body>
-    <nav class="top">
-        <ul class="nav-bar">
-            <li class="logo">PortFolio</li>
-            <div class="nav-items">
-            <li >Home</li>
-            <li onclick="scrollFunction()">Contact</li>
+  <nav class="top">
+    <ul class="nav-bar">
+      <li class="logo">PortFolio</li>
+      <div class="nav-items">
+        <li data-value="About" onclick="scrollFunction(this)">About</li>
+        <li data-value="Skills" onclick="scrollFunction(this)">Technical Skills</li>
+        <li data-value="Work" onclick="scrollFunction(this)">My Work</li>
+        <li data-value="Contact" onclick="scrollFunction(this)">Contact</li>
+      </div>
+    </ul>
+  </nav>
+  <div class="border-nav border"></div>
+  <div class="about">
+    <div class="about-me" id="About">About Me</div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner slides-box">
+        <div class="carousel-item active slides">
+          <div class="slide-content profile-image">
+            <img src="assets/profile image.jpg" width="230px" alt="">
+            <div class="name">Tanvi Agarwal</div>
+            <div>BTech 2027 IIT Indore</div>
+            <div>Department-CSE</div>
+          </div>
         </div>
-        </ul>
-    </nav>
-    <div class="about">
-        <div class="about-me">About Me</div>
-        <div class="about-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem iusto, corporis veniam voluptatem velit
-            dolores incidunt. Cumque ad nihil fugit?</div>
+        <div class="carousel-item slides">
+          <div class="slide-content por">
+            <div>
+              <div>Position of Responsibilties held:</div>
+              <ul class="por-list">
+                <li>Member of PClub IIT Indore</li>
+                <li>Member of GDSC</li>
+                <li>Outreach Associate at Fluxus'24</li>
+                <li>Marekting Co-ordinator at E-Summit'24</li>
+                <li>Branch representative at Counseling cell IIT Indore</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <div class="carousel-item slides">
+          <div class="slide-content content">
+            <!-- <div> -->
+            I have a strong interest in coding and a constant drive to learn more about it. I enjoy exploring new
+            programming languages, frameworks, and problem-solving techniques. I am always excited to take on new
+            challenges that help me enhance my skills and deepen my understanding of software development. My goal is to
+            continually improve as a developer and stay current with the latest trends and advancements in the tech
+            world.
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <div class="work">
-       
+
+  </div>
+  </div>
+  <div class="border"></div>
+  <div class="skills" id="Skills">
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner slides-box">
-          <div class="carousel-item active slides">
-            <div class="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam!</div>
-          </div>
-          <div class="carousel-item slides">
-            <div class="">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, exercitationem!</div>
-          </div>
-          <div class="carousel-item slides">
-            <div class="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, accusamus.</div>
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner slides-box">
+        <div class="carousel-item active slides">
+          <div class="slide-content skill-name">
+            <div class="">Full Stack Web Developer</div>
+            <img src="assets/full stack image.png" width="250px" alt="">
+            <div>Tech Stacks: HTML, CSS, Javascript, Node.js, Express.js, React.js, Next.js, Flask, Django, MongoDB</div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        <div class="carousel-item slides">
+          <div class="slide-content skill-name">
+            <div>App Development</div>
+            <img src="assets/app dev.jpg" width="250px" alt="">
+            <div>Tech Stacks: Flutter</div>
+          </div>
+        </div>
+        <div class="carousel-item slides">
+          <div class="slide-content skill-name">
+            <div>Machine Learning</div>
+            <img src="assets/machine learning.webp" width="250px" alt=""> 
+            <div>Tech Stacks: Python</div> 
+          </div>
+        </div>
       </div>
-      <div class="my-work">My Work</div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <div id="contact">
-        
-        <div>Contact Me</div>
-        <div>Linkedin</div>
-        <div>Email</div>
-        <div>Contact no</div>
+    <div class="my-skills">Skills</div>
+  </div>
+  <div class="border"></div>
+  <div class="work" id="Work">
+    <div class="my-work">My Work</div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner slides-box">
+        <div class="carousel-item active slides">
+          <div class="slide-content project">
+            <div>Pass-Manager</div>
+            <img src="assets/pass-manager.png" width="450px" alt=""> 
+            <div style="display: flex; align-items: center;">Github repo:
+              <a style="padding: 5px;" href="https://github.com/tanveeiii/password-manager" target="_blank"><i class="fa fa-github" style="color: black; font-size: 36px;"></i></a>
+            </div> 
+          </div>
+        </div>
+        <div class="carousel-item slides">
+          <div class="slide-content project">
+            <div>Quiz Website</div>
+            <img src="assets/quiz-1.png" width="450px" alt=""> 
+            <div style="display: flex; align-items: center;">Github repo:
+              <a style="padding: 5px;" href="https://github.com/Tanvi-Agarwal201/Quiz-Website-Tanvi-Agarwal-230001075" target="_blank"><i class="fa fa-github" style="color: black; font-size: 36px;"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item slides">
+          <div class="slide-content project">
+            <div>Weather Forecast Website</div>
+            <img src="assets/weather.png" width="450px" alt=""> 
+            <div style="display: flex; align-items: center;">Github repo:
+              <a style="padding: 5px;" href="https://github.com/tanveeiii/Weather-Forecast-website" target="_blank"><i class="fa fa-github" style="color: black; font-size: 36px;"></i></a>
+            </div> 
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
 
-    <script>
-        function scrollFunction() {
-          window.scrollTo({left:0, top:findPosition(document.getElementById("contact")), behavior:"smooth"});
-        }
-        function findPosition(obj) {
-          var currenttop = 0;
-          if (obj.offsetParent) {
-            do {
-              currenttop += obj.offsetTop;
-            } while ((obj = obj.offsetParent));
-            return [currenttop];
-          }
-        }
-      </script>
+  </div>
+  <div class="border"></div>
+  <div id="Contact" class="contact">
+
+    <div class="contact-me">Contact Me</div>
+    <div class="contact-content">
+      <div style="display: flex; align-items: center;">Linkedin
+        <a style="padding: 5px;" href="https://www.linkedin.com/in/tanvi-agarwal-110541277/" target="_blank"><i class="fa fa-linkedin-square" style="color: blue; font-size: 36px;"></i></a>
+      </div>
+      <div style="display: flex; align-items: center;">Email
+          <a style="padding: 5px;" href="mailto:cse230001075@iiti.ac.in" target="_blank"><i class="fa fa-envelope" style="color: red; font-size: 36px;"></i></a>
+        </div>
+      <div style="display: flex; align-items: center;">Contact no
+        <a style="padding: 5px;" href="tel:9027906684" target="_blank"><i class="fa fa-phone" style="color: white; font-size: 36px;"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function scrollFunction(element) {
+      let elementId = element.getAttribute("data-value")
+      // console.log(elementId)
+      window.scrollTo({ left: 0, top: findPosition(document.getElementById(elementId)) - 54, behavior: "smooth" });
+
+    }
+
+    function findPosition(obj) {
+     
+      return obj.offsetTop; 
+
+    }
+
+  </script>
 </body>
 
 </html>
